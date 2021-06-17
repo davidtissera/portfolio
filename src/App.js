@@ -1,6 +1,8 @@
+import Routes from './Router/Routes';
+
 const App = () => {
   return (
-    <>Hello world</>
+    <Routes />
   );
 };
 
