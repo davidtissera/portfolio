@@ -1,0 +1,28 @@
+.topbar {
+  height: 48px;
+  width: 100%;
+  background-color: lightseagreen;
+}
+
+.topbar-menu-items-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  float: right;
+  height: 100%;
+}
+
+.topbar-menu-item {
+  all: unset;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+.topbar-menu-icon-container {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  height: 100%;
+}

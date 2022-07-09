@@ -1,10 +1,11 @@
 import logo from './logo.svg'
 import './App.css'
+import Topbar from './components/Topbar'
 
 function App() {
   return (
-    <div className='App-header'>
-      <img src={logo} className="App-logo" alt="logo" />
+    <div className='App'>
+      <Topbar />
     </div>
   )
 }
