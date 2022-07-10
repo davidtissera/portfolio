@@ -1,6 +1,7 @@
 import { routes, IRoute } from '../router/routes'
 import { useMobile } from '../hooks/useMobile';
 import './Topbar.css'
+import { HamburgerMenu } from './HamburgerMenu';
 
 function Topbar() {
   const isMobile = useMobile()
@@ -28,7 +29,7 @@ function TopbarMobile() {
   return (
     <header className="topbar">
       <div className="topbar-menu-icon-container">
-        Menu Icona
+        <HamburgerMenu />
       </div>
     </header>
   )
