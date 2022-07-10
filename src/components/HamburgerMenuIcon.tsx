@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import menuIcon from '../assets/menu-icon.svg'
 import './HamburgerMenu.css'
 
-export function HamburgerMenu() {
+export function HamburgerMenuIcon() {
   const [isActive, setActive] = useState(false)
 
   const handleClick = () => {
