@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './HamburgerMenu.css'
+import './HamburgerMenuIcon.css'
 
 export function HamburgerMenuIcon() {
   const [isActive, setActive] = useState(false)
