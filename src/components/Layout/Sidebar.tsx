@@ -1,4 +1,4 @@
-import { routes, IRoute } from '../../router/routes'
+import { routes, IRoute } from '@/router/routes'
 import './css/Sidebar.css'
 
 export function Sidebar() {

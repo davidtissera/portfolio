@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { MOBILE_MIN_WIDTH } from "../common/global";
+import { MOBILE_MIN_WIDTH } from "@/common/global";
 import { useWindowSize } from "./useWindowSize";
 
 export function useMobile() {

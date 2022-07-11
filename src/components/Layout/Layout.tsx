@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Sidebar } from './Sidebar'
 import Topbar from './Topbar'
-import { useMobile } from '../../hooks/useMobile'
+import { useMobile } from '@/hooks/useMobile'
 
 function App() {
   const isMobile = useMobile()

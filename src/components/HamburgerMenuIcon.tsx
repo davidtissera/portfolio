@@ -1,5 +1,5 @@
 import { SyntheticEvent, useState } from 'react'
-import './HamburgerMenuIcon.css'
+import './css/HamburgerMenuIcon.css'
 
 export interface IHamburgerMenuIcon {
   onClick: React.ReactEventHandler
