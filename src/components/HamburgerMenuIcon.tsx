@@ -1,11 +1,18 @@
-import { useState } from 'react'
+import { SyntheticEvent, useState } from 'react'
 import './HamburgerMenuIcon.css'
 
-export function HamburgerMenuIcon() {
+export interface IHamburgerMenuIcon {
+  onClick: React.ReactEventHandler
+}
+
+export function HamburgerMenuIcon(props: IHamburgerMenuIcon) {
+  const { onClick } = props
+
   const [isActive, setActive] = useState(false)
 
-  const handleClick = () => {
+  const handleClick = (e: SyntheticEvent) => {
     setActive((prevState) => !prevState)
+    onClick(e);
   }
 
   return (

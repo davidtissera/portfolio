@@ -2,12 +2,18 @@ import { routes, IRoute } from '../router/routes'
 import { useMobile } from '../hooks/useMobile';
 import './Topbar.css'
 import { HamburgerMenuIcon } from './HamburgerMenuIcon';
+import { ReactEventHandler } from 'react';
 
-function Topbar() {
+export interface IITopbar {
+  onClickMenuIcon: ReactEventHandler
+}
+
+function Topbar(props: IITopbar) {
+  const { onClickMenuIcon } = props
   const isMobile = useMobile()
 
   return (
-    isMobile ? <TopbarMobile /> : <TopbarDesktop />
+    isMobile ? <TopbarMobile onClickMenuIcon={onClickMenuIcon} /> : <TopbarDesktop />
   )
 }
 
@@ -17,7 +23,10 @@ function TopbarDesktop() {
       <div className="topbar-menu-items-container">
         {routes.map((route: IRoute) => {
           return (
-            <a href={route.path} key={route.path} className="topbar-menu-item">{route.label}</a>
+            <div key={route.path} className="topbar-menu-item">
+              <i className={`fa-solid ${route.icon}`} />
+              <a href={route.path} key={route.path}>{route.label}</a>
+            </div>
           );
         })}
       </div>
@@ -25,11 +34,14 @@ function TopbarDesktop() {
   )
 }
 
-function TopbarMobile() {
+
+function TopbarMobile(props: IITopbar) {
+  const { onClickMenuIcon } = props
+
   return (
     <header className="topbar">
-      <div className="topbar-menu-icon-container">
-        <HamburgerMenuIcon />
+      <div className="topbar-menu-items-container">
+        <HamburgerMenuIcon onClick={onClickMenuIcon} />
       </div>
     </header>
   )
