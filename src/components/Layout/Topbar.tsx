@@ -2,8 +2,8 @@ import { ReactEventHandler } from 'react';
 import { routes, IRoute } from '@/router/routes'
 import { useMobile } from '@/hooks/useMobile';
 import { HamburgerMenuIcon } from '@/components/HamburgerMenuIcon';
-import davoPhoto from '@/assets/davo.jpg';
 import './css/Topbar.css'
+import { Link } from 'react-router-dom';
 
 export interface IITopbar {
   onClickMenuIcon: ReactEventHandler
@@ -29,7 +29,7 @@ function TopbarDesktop() {
         {routes.map((route: IRoute) => {
           return (
             <div key={route.path} className="topbar-menu-item">
-              <a href={route.path} key={route.path}>{route.label}</a>
+              <Link to={route.path}>{route.label}</Link>
             </div>
           );
         })}

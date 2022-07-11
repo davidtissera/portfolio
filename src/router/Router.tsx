@@ -5,13 +5,11 @@ export default function Router() {
   const [aboutMe, resume, portfolio, contact] = routes;
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path={aboutMe.path} element={<>About me</>} />
-        <Route path={resume.path} element={<>Resume</>} />
-        <Route path={portfolio.path} element={<>Portfolio</>} />
-        <Route path={contact.path} element={<>Contact</>} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path={aboutMe.path} element={<>About me</>} />
+      <Route path={resume.path} element={<>Resume</>} />
+      <Route path={portfolio.path} element={<>Portfolio</>} />
+      <Route path={contact.path} element={<>Contact</>} />
+    </Routes>
   );
 }

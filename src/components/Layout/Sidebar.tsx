@@ -1,4 +1,5 @@
-import { routes, IRoute } from '@/router/routes'
+import { routes } from '@/router/routes'
+import { Link } from 'react-router-dom'
 import './css/Sidebar.css'
 
 export function Sidebar() {
@@ -11,7 +12,7 @@ export function Sidebar() {
               <div className="sidebar-icon-container">
                 <i className={`fa-solid ${route.icon}`} />
               </div>
-              <a href={route.path}>{route.label}</a>
+              <Link to={route.path}>{route.label}</Link>
             </li>
           )
         })}
