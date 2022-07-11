@@ -20,13 +20,15 @@ function Topbar(props: IITopbar) {
 
 function TopbarDesktop() {
   return (
-    <header className="topbar">
-      <img className="topbar-myself-photo" src={davoPhoto} />
-      <div className="topbar-menu-items-container">
+    <header className="topbar-desktop">
+      <div className="topbar-column-one">
+        <div className="topbar-circle-initials">D</div>
+        <h3 className="topbar-myself-name"><b>David Alejandro Tissera</b></h3>
+      </div>
+      <div className="topbar-column-two">
         {routes.map((route: IRoute) => {
           return (
             <div key={route.path} className="topbar-menu-item">
-              <i className={`fa-solid ${route.icon}`} />
               <a href={route.path} key={route.path}>{route.label}</a>
             </div>
           );
@@ -41,10 +43,10 @@ function TopbarMobile(props: IITopbar) {
   const { onClickMenuIcon } = props
 
   return (
-    <header className="topbar">
+    <header className="topbar-mobile">
       <div className="topbar-menu-items-container-mobile">
         <HamburgerMenuIcon onClick={onClickMenuIcon} />
-        <img className="topbar-myself-photo" src={davoPhoto} />
+        <div className="topbar-circle-initials">D</div>
       </div>
     </header>
   )
