@@ -11,7 +11,7 @@ export function Sidebar() {
               <div className="sidebar-icon-container">
                 <i className={`fa-solid ${route.icon}`} />
               </div>
-              <a href={route.path} style={{ marginLeft: '20px' }}>{route.label}</a>
+              <a href={route.path}>{route.label}</a>
             </li>
           )
         })}

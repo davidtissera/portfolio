@@ -16,7 +16,12 @@
 .topbar-menu-item {
   font-weight: 700;
   cursor: pointer;
+  opacity: 0.8;
   margin: 0 10px;
+}
+
+.topbar-menu-item:hover {
+  opacity: 1;
 }
 
 .topbar-menu-item > a {

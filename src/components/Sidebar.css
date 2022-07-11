@@ -22,6 +22,11 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 50px;
+  opacity: 0.8;
+}
+
+.sidebar-routes-list-item:hover {
+  opacity: 1;
 }
 
 .sidebar-routes-list-item:first-child {
@@ -30,7 +35,7 @@
 
 .sidebar-routes-list-item > a {
   all: unset;
-  cursor: pointer;
+  margin-left: 12px;
 }
 
 .sidebar-icon-container {
