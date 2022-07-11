@@ -1,9 +1,9 @@
 import { ReactEventHandler } from 'react';
-import { routes, IRoute } from '../router/routes'
-import { useMobile } from '../hooks/useMobile';
-import { HamburgerMenuIcon } from './HamburgerMenuIcon';
-import davoPhoto from '../assets/davo.jpg';
-import './Topbar.css'
+import { routes, IRoute } from '../../router/routes'
+import { useMobile } from '../../hooks/useMobile';
+import { HamburgerMenuIcon } from '../HamburgerMenuIcon';
+import davoPhoto from '../../assets/davo.jpg';
+import './css/Topbar.css'
 
 export interface IITopbar {
   onClickMenuIcon: ReactEventHandler

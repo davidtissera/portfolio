@@ -1,26 +1,11 @@
-import { useEffect, useState } from 'react'
-import { Sidebar } from './components/Sidebar'
-import Topbar from './components/Topbar'
-import { useMobile } from './hooks/useMobile'
+import Layout from './components/Layout/Layout'
+import Router from './router/Router'
 
 function App() {
-  const isMobile = useMobile()
-  const [isSidebarVisible, setSidebarVisible] = useState(false)
-
-  useEffect(() => {
-    if (!isMobile) {
-      setSidebarVisible(false)
-    }
-  }, [isMobile])
-
-  const handleClickMenuIcon = () => {
-    setSidebarVisible((prevState) => !prevState)
-  }
-
   return (
     <div className='App'>
-      <Topbar onClickMenuIcon={handleClickMenuIcon} />
-      {isSidebarVisible && <Sidebar />}
+      <Layout />
+      <Router />
     </div>
   )
 }

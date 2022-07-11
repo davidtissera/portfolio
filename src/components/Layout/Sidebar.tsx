@@ -1,5 +1,5 @@
-import { routes, IRoute } from '../router/routes'
-import './Sidebar.css'
+import { routes, IRoute } from '../../router/routes'
+import './css/Sidebar.css'
 
 export function Sidebar() {
   return (
