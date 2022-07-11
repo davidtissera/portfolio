@@ -1,7 +1,5 @@
 .sidebar-container {
-  background-color: #20b2ab7a;
-  width: 300px;
-  height: 100vh;
+  width: 50%;
   position: absolute;
   left: -500px;
   animation: slide 0.25s forwards;
@@ -32,7 +30,7 @@
   justify-content: flex-start;
   cursor: pointer;
   width: 260px;
-  padding: 0 20px;
+  padding: 0 15px;
   font-size: 18px;
   font-weight: 700;
   line-height: 50px;
@@ -49,7 +47,7 @@
 
 .sidebar-routes-list-item > a {
   all: unset;
-  margin-left: 12px;
+  margin-left: 10px;
 }
 
 .sidebar-icon-container {

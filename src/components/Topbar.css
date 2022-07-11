@@ -1,7 +1,31 @@
 .topbar {
-  height: 48px;
+  height: 50px;
   width: 100%;
-  background-color: lightseagreen;
+  background: linear-gradient(-45deg, rgb(255, 144, 107), rgb(236, 74, 104), rgb(206, 32, 163));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.topbar-myself-photo {
+  width: 38px;
+  border-radius: 100%;
+  margin-left: 10px;
 }
 
 .topbar-menu-items-container {
@@ -9,8 +33,16 @@
   align-items: center;
   justify-content: center;
   margin: 0px;
-  float: right;
   height: 100%;
+}
+
+.topbar-menu-items-container-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding-right: 10px;
 }
 
 .topbar-menu-item {

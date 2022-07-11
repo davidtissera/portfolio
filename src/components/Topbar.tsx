@@ -1,8 +1,9 @@
+import { ReactEventHandler } from 'react';
 import { routes, IRoute } from '../router/routes'
 import { useMobile } from '../hooks/useMobile';
-import './Topbar.css'
 import { HamburgerMenuIcon } from './HamburgerMenuIcon';
-import { ReactEventHandler } from 'react';
+import davoPhoto from '../assets/davo.jpg';
+import './Topbar.css'
 
 export interface IITopbar {
   onClickMenuIcon: ReactEventHandler
@@ -20,6 +21,7 @@ function Topbar(props: IITopbar) {
 function TopbarDesktop() {
   return (
     <header className="topbar">
+      <img className="topbar-myself-photo" src={davoPhoto} />
       <div className="topbar-menu-items-container">
         {routes.map((route: IRoute) => {
           return (
@@ -40,8 +42,9 @@ function TopbarMobile(props: IITopbar) {
 
   return (
     <header className="topbar">
-      <div className="topbar-menu-items-container">
+      <div className="topbar-menu-items-container-mobile">
         <HamburgerMenuIcon onClick={onClickMenuIcon} />
+        <img className="topbar-myself-photo" src={davoPhoto} />
       </div>
     </header>
   )

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import './App.css'
 import { Sidebar } from './components/Sidebar'
 import Topbar from './components/Topbar'
 import { useMobile } from './hooks/useMobile'
