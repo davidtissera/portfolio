@@ -1,10 +1,12 @@
+@import "main";
+
 body {
   margin: 0;
   font-family: 'Poppins', 'Poppins-light', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
-  color: #202020;
+  color: map-get($palette , $key: text);
   display: flex;
   align-items: center;
   justify-content: center;

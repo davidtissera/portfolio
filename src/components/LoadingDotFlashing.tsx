@@ -1,4 +1,4 @@
-import './css/LoadingDotFlashing.css'
+import './css/LoadingDotFlashing.scss'
 
 export default function LoadingDotFlashing() {
   return (
