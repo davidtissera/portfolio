@@ -17,7 +17,7 @@
 .line {
   fill:none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke:rgb(255, 255, 255);
+  stroke: #202020;
   stroke-width:5.5;
   stroke-linecap:round;
 }

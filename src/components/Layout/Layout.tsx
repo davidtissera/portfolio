@@ -17,10 +17,14 @@ function App() {
     setSidebarVisible((prevState) => !prevState)
   }
 
+  const handleClickMenuItem = () => {
+    setSidebarVisible(false)
+  }
+
   return (
     <>
-      <Topbar onClickMenuIcon={handleClickMenuIcon} />
-      {isSidebarVisible && <Sidebar />}
+      <Topbar onClickMenuIcon={handleClickMenuIcon} isHamburgerMenuActive={isSidebarVisible} />
+      <Sidebar isVisible={isSidebarVisible} onClickMenuItem={handleClickMenuItem} />
     </>
   )
 }

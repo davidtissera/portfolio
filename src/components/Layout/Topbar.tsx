@@ -6,15 +6,23 @@ import './css/Topbar.css'
 import { Link } from 'react-router-dom';
 
 export interface IITopbar {
-  onClickMenuIcon: ReactEventHandler
+  onClickMenuIcon: ReactEventHandler;
+  isHamburgerMenuActive: boolean;
 }
 
 function Topbar(props: IITopbar) {
-  const { onClickMenuIcon } = props
+  const { onClickMenuIcon, isHamburgerMenuActive } = props
   const isMobile = useMobile()
 
   return (
-    isMobile ? <TopbarMobile onClickMenuIcon={onClickMenuIcon} /> : <TopbarDesktop />
+    isMobile ? (
+      <TopbarMobile
+        isHamburgerMenuActive={isHamburgerMenuActive}
+        onClickMenuIcon={onClickMenuIcon}
+      />
+    ) : (
+      <TopbarDesktop />
+    )
   )
 }
 
@@ -23,7 +31,7 @@ function TopbarDesktop() {
     <header className="topbar-desktop">
       <div className="topbar-column-one">
         <div className="topbar-circle-initials">D</div>
-        <h3 className="topbar-myself-name"><b>David Alejandro Tissera</b></h3>
+        <h3 className="topbar-myself-name"><b>David</b> Tissera</h3>
       </div>
       <div className="topbar-column-two">
         {routes.map((route: IRoute) => {
@@ -40,12 +48,14 @@ function TopbarDesktop() {
 
 
 function TopbarMobile(props: IITopbar) {
-  const { onClickMenuIcon } = props
+  const { onClickMenuIcon, isHamburgerMenuActive } = props
 
   return (
     <header className="topbar-mobile">
       <div className="topbar-menu-items-container-mobile">
-        <HamburgerMenuIcon onClick={onClickMenuIcon} />
+        <div className="hamburger-menu-icon-container">
+          <HamburgerMenuIcon isActive={isHamburgerMenuActive} onClick={onClickMenuIcon} />
+        </div>
         <div className="topbar-circle-initials">D</div>
       </div>
     </header>
