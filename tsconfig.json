@@ -23,6 +23,7 @@
       "components/*": ["components/*"],
       "hooks/*": ["hooks/*"],
       "common/*": ["common/*"],
+      "views/*": ["views/*"],
     }
   },
   "include": ["src"],

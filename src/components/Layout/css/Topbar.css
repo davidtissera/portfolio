@@ -55,6 +55,7 @@
 }
 
 .topbar-myself-name {
+  margin: unset;
   font-weight: 500;
   margin-left: 12px;
 }

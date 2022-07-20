@@ -1,0 +1,5 @@
+Hi there! 👋, my name is David.
+I am a Software Developer based in Rosario, Santa Fe, Argentina 🇦🇷.
+I have been working 👨🏻‍💻 since four years designing and developing all kind of software products.
+When I develop any software I consider very important to focus on code quality, to achieve this, I believe that it is vital to use the best practices, be consistent, be aware of latest technologies and not be afraid of change. 💪🏼
+I believe that programming is an amazing discipline that allows us to create almost everything and play with our imagination 🌈 without any barriers, this is why I choose it every single day.

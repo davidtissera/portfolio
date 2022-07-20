@@ -1,0 +1,35 @@
+.myself {
+  width: 400px;
+  border-radius: 100%;
+  border: 20px solid white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 12px 0px;
+}
+
+.name {
+  font-weight: bolder;
+}
+
+.name > span {
+  font-weight: 400;
+  color: rgb(62, 62, 62)
+}
+
+.profession {
+  color: #797979;
+}
+
+@media screen and (max-width: 1200px) {
+  .myself {
+    width: 350px
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .name, .profession {
+    text-align: center;
+  }
+  .myself {
+    width: 250px;
+    border-width: 10px;
+  }
+}
