@@ -1,0 +1,26 @@
+.container {
+  max-width: 1000px;
+}
+
+.resume-back {
+  position: relative;
+  text-align: left;
+  font-weight: 700;
+  height: 100%;
+}
+
+div.key {
+  text-align: left;
+  color: rgb(205, 205, 205);
+  font-weight: 500;
+}
+
+div.value {
+  margin-left: 20px;
+}
+
+.website {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}

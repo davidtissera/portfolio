@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Santex",
+    "logo": "src/assets/santex-logo.png",
+    "activity_date": "March 2022 - Present",
+    "website": "https://santexgroup.com",
+    "about": "Backoffice application for an important fast-food restaurant chain company",
+    "technologies_involved": ["JavaScript", "TypeScript", "ReactJS", "Material UI", "Redux"],
+    "work_methodologies": ["Scrum", "Agile"]
+  },
+  {
+    "name": "Santex",
+    "logo": "src/assets/santex-logo.png",
+    "activity_date": "March 2022 - Present",
+    "website": "https://santexgroup.com",
+    "about": "Backoffice application for an important fast-food restaurant chain company",
+    "technologies_involved": ["JavaScript", "TypeScript", "ReactJS", "Material UI", "Redux"],
+    "work_methodologies": ["Scrum", "Agile"]
+  },
+  {
+    "name": "Santex",
+    "logo": "src/assets/santex-logo.png",
+    "activity_date": "March 2022 - Present",
+    "website": "https://santexgroup.com",
+    "about": "Backoffice application for an important fast-food restaurant chain company",
+    "technologies_involved": ["JavaScript", "TypeScript", "ReactJS", "Material UI", "Redux"],
+    "work_methodologies": ["Scrum", "Agile"]
+  },
+  {
+    "name": "Santex",
+    "logo": "src/assets/santex-logo.png",
+    "activity_date": "March 2022 - Present",
+    "website": "https://santexgroup.com",
+    "about": "Backoffice application for an important fast-food restaurant chain company",
+    "technologies_involved": ["JavaScript", "TypeScript", "ReactJS", "Material UI", "Redux"],
+    "work_methodologies": ["Scrum", "Agile"]
+  },
+  {
+    "name": "Santex",
+    "logo": "src/assets/santex-logo.png",
+    "activity_date": "March 2022 - Present",
+    "website": "https://santexgroup.com",
+    "about": "Backoffice application for an important fast-food restaurant chain company",
+    "technologies_involved": ["JavaScript", "TypeScript", "ReactJS", "Material UI", "Redux"],
+    "work_methodologies": ["Scrum", "Agile"]
+  },
+  {
+    "name": "Santex",
+    "logo": "src/assets/santex-logo.png",
+    "activity_date": "March 2022 - Present",
+    "website": "https://santexgroup.com",
+    "about": "Backoffice application for an important fast-food restaurant chain company",
+    "technologies_involved": ["JavaScript", "TypeScript", "ReactJS", "Material UI", "Redux"],
+    "work_methodologies": ["Scrum", "Agile"]
+  }
+]
