@@ -44,7 +44,7 @@ export default function Resume() {
 function ResumeFront(props: any) {
   const { companyLogo } = props
   return (
-    <img width="300px" src={companyLogo} />
+    <img className="resume-front-img" src={companyLogo} />
   )
 }
 

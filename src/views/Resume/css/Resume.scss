@@ -2,6 +2,17 @@
   max-width: 1000px;
 }
 
+@media screen and (max-width: 1000px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+.resume-front-img {
+  width: 100%;
+  object-fit: contain;
+}
+
 .resume-back {
   position: relative;
   text-align: left;
