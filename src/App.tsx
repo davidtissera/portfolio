@@ -3,9 +3,13 @@ import Layout from './components/Layout/Layout'
 import Router from './router/Router'
 import { BrowserRouter } from 'react-router-dom'
 import LoadingDotFlashing from '@/components/LoadingDotFlashing'
+import { useMobile } from './hooks/useMobile'
 
 function App() {
   const [isLoading, setLoading] = useState(true)
+  const isMobile = useMobile()
+  const sidebarHeightMobile = "60px"
+  const sidebarHeightDesktop = "120px"
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,7 +27,9 @@ function App() {
     <div>
       <BrowserRouter>
         <Layout />
-        <Router />
+        <div style={{ marginTop: isMobile ? sidebarHeightMobile : sidebarHeightDesktop }}>
+          <Router />
+        </div>
       </BrowserRouter>
     </div>
   )

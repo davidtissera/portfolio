@@ -1,5 +1,8 @@
 .topbar-desktop {
+  position: absolute;
+  width: 100%;
   height: 100px;
+  top: 0px;
   color: rgb(41, 41, 41);
   background: white;
   padding: 0 32px;
@@ -11,6 +14,9 @@
 }
 
 .topbar-mobile {
+  position: absolute;
+  width: 100%;
+  top: 0px;
   height: 50px;
   color: rgb(41, 41, 41);
   padding: 0 10px;
