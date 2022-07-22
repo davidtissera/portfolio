@@ -4,7 +4,7 @@ import './css/Resume.scss'
 
 export default function Resume() {
   return (
-    <div className="container mt-4">
+    <div className="container py-2">
       <h1 className="fw-bold text-center text-md-start mb-4">Work experiences</h1>
       <div>
         {workExperiences.map(({

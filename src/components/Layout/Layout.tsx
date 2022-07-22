@@ -1,9 +1,15 @@
-import { useEffect, useState } from 'react'
+import { ReactElement, useEffect, useState } from 'react'
 import { Sidebar } from './Sidebar'
 import Topbar from './Topbar'
 import { useMobile } from '@/hooks/useMobile'
+import './css/Layout.css'
 
-function App() {
+export interface ILayout {
+  children: ReactElement;
+}
+
+function Layout(props: ILayout) {
+  const { children } = props
   const isMobile = useMobile()
   const [isSidebarVisible, setSidebarVisible] = useState(false)
 
@@ -25,8 +31,9 @@ function App() {
     <>
       <Topbar onClickMenuIcon={handleClickMenuIcon} isHamburgerMenuActive={isSidebarVisible} />
       <Sidebar isVisible={isSidebarVisible} onClickMenuItem={handleClickMenuItem} />
+      <div className='content'>{children}</div>
     </>
   )
 }
 
-export default App
+export default Layout

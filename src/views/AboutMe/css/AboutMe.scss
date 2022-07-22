@@ -18,6 +18,18 @@
   color: #797979;
 }
 
+.btn-go-see-resume {
+  transition: opacity 1s;
+}
+
+.btn-go-see-resume.visible {
+  opacity: 1;
+}
+
+.btn-go-see-resume.hidden {
+  opacity: 0;
+}
+
 @media screen and (max-width: 1200px) {
   .myself {
     width: 350px
