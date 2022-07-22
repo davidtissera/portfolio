@@ -1,56 +1,38 @@
 [
   {
-    "name": "Santex 1",
-    "logo": "src/assets/santex-logo.png",
+    "name": "Restaurant Brands International",
     "activity_date": "March 2022 - Present",
+    "type": "Frontend",
     "website": "https://santexgroup.com",
-    "about": "Backoffice application for an important fast-food restaurant chain company",
+    "about": "Working on improvements on the performance, scalability and user experience of a backoffice application used world-wide by many employees of different fast-food restaurant chains like Burger King, Tim Hortons, Popeyes, etc.",
     "technologies_involved": ["JavaScript", "TypeScript", "ReactJS", "Material UI", "Redux"],
     "work_methodologies": ["Scrum", "Agile"]
   },
   {
-    "name": "Santex 2",
-    "logo": "src/assets/santex-logo.png",
-    "activity_date": "March 2022 - Present",
-    "website": "https://santexgroup.com",
-    "about": "Backoffice application for an important fast-food restaurant chain company",
-    "technologies_involved": ["JavaScript", "TypeScript", "ReactJS", "Material UI", "Redux"],
+    "name": "Killburn Live LLC",
+    "activity_date": "December 2021 - March 2022",
+    "type": "Fullstack",
+    "website": "https://killburnlive.com",
+    "about": "Working on some feature implementations for an application used for children's games such as NERF Challenge, Skeegolf, Basketball, etc. The application does all the administration part of the games such as creation of groups, players, game time, credits, etc.",
+    "technologies_involved": ["VueJS", "Vuex", "NestJS", "Node", "JavaScript", "TypeScript"],
     "work_methodologies": ["Scrum", "Agile"]
   },
   {
-    "name": "Santex 3",
-    "logo": "src/assets/santex-logo.png",
-    "activity_date": "March 2022 - Present",
-    "website": "https://santexgroup.com",
-    "about": "Backoffice application for an important fast-food restaurant chain company",
-    "technologies_involved": ["JavaScript", "TypeScript", "ReactJS", "Material UI", "Redux"],
+    "name": "ProvantageX",
+    "activity_date": "June 2021 - December 2021",
+    "type": "Frontend",
+    "website": "https://provantagex.com",
+    "about": "Working on feature implementation, maintenance and production support for an application used for media industry. The application is oriented to optimize the way clients such as radio or television stations buy advertisements",
+    "technologies_involved": ["ReactJS", "BaoBab", "JavaScript", "TypeScript"],
     "work_methodologies": ["Scrum", "Agile"]
   },
   {
-    "name": "Santex 4",
-    "logo": "src/assets/santex-logo.png",
-    "activity_date": "March 2022 - Present",
-    "website": "https://santexgroup.com",
-    "about": "Backoffice application for an important fast-food restaurant chain company",
-    "technologies_involved": ["JavaScript", "TypeScript", "ReactJS", "Material UI", "Redux"],
-    "work_methodologies": ["Scrum", "Agile"]
-  },
-  {
-    "name": "Santex 5",
-    "logo": "src/assets/santex-logo.png",
-    "activity_date": "March 2022 - Present",
-    "website": "https://santexgroup.com",
-    "about": "Backoffice application for an important fast-food restaurant chain company",
-    "technologies_involved": ["JavaScript", "TypeScript", "ReactJS", "Material UI", "Redux"],
-    "work_methodologies": ["Scrum", "Agile"]
-  },
-  {
-    "name": "Santex 6",
-    "logo": "src/assets/santex-logo.png",
-    "activity_date": "March 2022 - Present",
-    "website": "https://santexgroup.com",
-    "about": "Backoffice application for an important fast-food restaurant chain company",
-    "technologies_involved": ["JavaScript", "TypeScript", "ReactJS", "Material UI", "Redux"],
+    "name": "Poincenot Technology Studio",
+    "activity_date": "February 2020 - June 2021",
+    "type": "Frontend",
+    "website": "https://poincenot.com",
+    "about": "Working on feature implementations, for a white-label application related to financial regulation. The application provides a white label solution for financial institutions looking for more accurate information about their clients and analysis of that information in terms of variables such as credit risk, fraud detection, politically exposed persons, etc.",
+    "technologies_involved": ["ReactJS", "JavaScript", "Material UI", "Redux", "React Hook Form"],
     "work_methodologies": ["Scrum", "Agile"]
   }
 ]

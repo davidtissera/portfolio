@@ -4,13 +4,18 @@
 
 @media screen and (max-width: 1000px) {
   .container {
-    max-width: 600px;
+    max-width: 800px;
   }
 }
 
-.resume-front-img {
+.resume-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  text-align: center;
   width: 100%;
-  object-fit: contain;
+  height: 100%;
 }
 
 .resume-back {
