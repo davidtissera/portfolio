@@ -17,7 +17,7 @@ export default function Contact() {
   }
 
   return (
-    <>
+    <div className="container">
       <h1 className="text-center">Contact Me!</h1>
       <div className="d-flex align-items-center justify-content-center mt-5">
         <div className="d-flex justify-content-center row container-sm">
@@ -26,7 +26,7 @@ export default function Contact() {
               <input id="fullname" type="text" className="form-control" placeholder="Full Name" aria-label="Full Name" />
             </div>
             <div className="w-100 mt-4">
-              <input id="email" type="text" className="form-control" placeholder="Email Address" aria-label="Email Address" />
+              <input id="email" type="text" className="form-control" placeholder="Your Email Address" aria-label="Your Email Address" />
             </div>
             <div className="w-100 mt-4 mb-4">
               <input id="subject" type="text" className="form-control" placeholder="Subject" aria-label="Subject" />
@@ -37,7 +37,7 @@ export default function Contact() {
               <textarea
                 id="message"
                 className="form-control"
-                placeholder="Leave you Message!"
+                placeholder="Leave your Message!"
                 aria-label="Leave your Message!"
                 rows={6}
                 cols={20}
@@ -52,10 +52,10 @@ export default function Contact() {
             >
               {isSendingEmail && (
                 <div
-                className="spinner spinner-border"
-                style={{ width: "20px", height: "20px" }}
-                role="status"
-                aria-hidden={`${!isSendingEmail}`}
+                  className="spinner spinner-border"
+                  style={{ width: "20px", height: "20px" }}
+                  role="status"
+                  aria-hidden={`${!isSendingEmail}`}
                 >
                   <span className="visually-hidden">Loading...</span>
                 </div>
@@ -65,6 +65,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

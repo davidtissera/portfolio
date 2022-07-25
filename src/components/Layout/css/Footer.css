@@ -7,6 +7,7 @@ footer {
   padding: 10px;
   background-color: transparent;
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid rgb(201, 201, 201);
 }
 
@@ -17,12 +18,20 @@ footer {
 }
 
 .designed-by {
+  text-align: center;
+  font-family: monospace;
   justify-content: flex-end;
+}
+
+.social-media-button {
+  all: unset;
 }
 
 @media screen and (max-width: 800px) {
   footer {
-    height: 70px;
+    position: absolute;
+    bottom: 0;
+    height: 80px;
   }
   .designed-by, .social-media {
     display: flex;

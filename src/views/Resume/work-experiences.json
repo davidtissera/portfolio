@@ -12,7 +12,7 @@
     "name": "Killburn Live LLC",
     "activity_date": "December 2021 - March 2022",
     "type": "Fullstack",
-    "website": "https://killburnlive.com",
+    "website": "https://www.kilburnlive.com",
     "about": "Working on some feature implementations for an application used for children's games such as NERF Challenge, Skeegolf, Basketball, etc. The application does all the administration part of the games such as creation of groups, players, game time, credits, etc.",
     "technologies_involved": ["VueJS", "Vuex", "NestJS", "Node", "JavaScript", "TypeScript"],
     "work_methodologies": ["Scrum", "Agile"]
@@ -31,7 +31,7 @@
     "activity_date": "February 2020 - June 2021",
     "type": "Frontend",
     "website": "https://poincenot.com",
-    "about": "Working on feature implementations , for a white-label application related to financial regulation. The application provides a white label solution for financial institutions looking for more accurate information about their clients and analysis of that information in terms of variables such as credit risk, fraud detection, politically exposed persons, etc.",
+    "about": "Working on feature implementations for a white-label application related to financial regulation. The application provides a white label solution for financial institutions looking for more accurate information about their clients and analysis of that information in terms of variables such as credit risk, fraud detection, politically exposed persons, etc.",
     "technologies_involved": ["ReactJS", "JavaScript", "Material UI", "Redux", "React Hook Form"],
     "work_methodologies": ["Scrum", "Agile"]
   }

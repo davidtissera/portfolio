@@ -3,7 +3,8 @@
   top: 100px;
   width: 100%;
   height: auto;
-  min-height: calc(100vh - 100px);
+  padding-bottom: 50px;
+  min-height: 100vh;
   background-image: url('../src/assets/layered-waves-mono.svg');
   background-color: #fff;
   background-position: bottom;

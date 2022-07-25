@@ -1,7 +1,14 @@
 import './css/Footer.css'
 
 export default function Footer() {
-  const socialMedia = ["Github", "Linkedin"]
+  const socialMedia = [
+    { name: "Github", icon: "fa-brands fa-github", link: 'https://github.com/davidtissera/' },
+    { name: "Linkedin", icon: "fa-brands fa-linkedin", link: 'https://www.linkedin.com/in/david-tissera-6745b71ab/' },
+  ]
+
+  const handleClickSocialMedia = (link: string) => {
+    window.open(link, '_blank')?.focus()
+  }
 
   return (
     <footer className='fs-6'>
@@ -9,9 +16,14 @@ export default function Footer() {
         <div className='social-media col-sm-12 col-md-6'>
           {socialMedia.map((socialMedia) => {
             return (
-              <span className='mx-2 fw-bolder' key={socialMedia} style={{ cursor: "pointer" }}>
-                {socialMedia}
-              </span>
+              <button
+                className='social-media-button btn btn-sm btn-link mx-2 fw-bolder'
+                key={socialMedia.name}
+                onClick={() => handleClickSocialMedia(socialMedia.link)}
+              >
+                <i className={`${socialMedia.icon} mx-2`} />
+                {socialMedia.name}
+              </button>
             )
           })}
         </div>

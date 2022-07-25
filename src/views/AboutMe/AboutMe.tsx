@@ -1,4 +1,3 @@
-import ViewContainer from "@/components/ViewContainer";
 import { useEffect, useState } from "react";
 import about from './about.txt'
 import mySelfPhoto from '../../assets/davo.jpg'
@@ -34,7 +33,7 @@ export default function AboutMe() {
   }
 
   return (
-    <div className="container mt-4 p-4">
+    <div className="container mt-0 mt-md-2 p-4 pt-0">
       <div className="row">
         <div className="d-flex align-items-center justify-content-center col-lg-5 col-md-12 col-sm-12">
           <img className="myself" src={mySelfPhoto} alt="Man with sunglasses" />
@@ -55,6 +54,7 @@ export default function AboutMe() {
               d-flex align-items-center justify-content-center
               btn btn-primary
               btn-lg btn-go-see-resume ${timeOutGoResume ? 'visible' : 'hidden'}
+              my-4
             `}
           >
             <span className="mx-2 fs-6">
