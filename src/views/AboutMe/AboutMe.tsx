@@ -58,7 +58,7 @@ export default function AboutMe() {
             `}
           >
             <span className="mx-2 fs-6">
-              Check out some of my work
+              Check some of my work experiences
             </span>
             <i className="fa-solid fa-arrow-right" />
           </button>

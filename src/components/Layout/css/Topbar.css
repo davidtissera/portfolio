@@ -29,6 +29,17 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+button > span.country-flag {
+  transition: font-size 0.8s ease-out;
+  -webkit-transition: font-size 0.8s ease-out;
+  font-size: 35px;
+}
+
+button:active > span.country-flag {
+  transition: font-size 0.1s ease-in;
+  font-size: 50px;
+}
+
 .hamburger-menu-icon-container {
   height: 50px;
   transform: translateX(-8px);

@@ -1,4 +1,5 @@
 import { ReactEventHandler } from 'react';
+import { useTranslation } from 'react-i18next';
 import { routes, IRoute } from '@/router/routes'
 import { useMobile } from '@/hooks/useMobile';
 import { HamburgerMenuIcon } from '@/components/HamburgerMenuIcon';
@@ -8,25 +9,60 @@ import { Link } from 'react-router-dom';
 export interface IITopbar {
   onClickMenuIcon: ReactEventHandler;
   isHamburgerMenuActive: boolean;
+  onChangeLanguage: () => void;
+  countryFlag: "🇪🇸" | "🇬🇧";
 }
 
 function Topbar(props: IITopbar) {
   const { onClickMenuIcon, isHamburgerMenuActive } = props
   const isMobile = useMobile()
 
+  const { i18n } = useTranslation()
+
+  const languages = [
+    { language: 'en', flag: "🇬🇧" },
+    { language: 'es', flag: "🇪🇸" }
+  ]
+
+  const getCurrentLanguageCountryFlag = () => {
+    console.log('i18n.language', i18n.language)
+    const flag = languages.filter((l) => i18n.language.includes(l.language))[0].flag as "🇪🇸" | "🇬🇧"
+
+    return flag
+  }
+
+  const handleChangeLanguage = () => {
+    if (i18n.language === 'es') {
+      i18n.changeLanguage('en')
+    } else {
+      i18n.changeLanguage('es')
+    }
+  }
+
   return (
     isMobile ? (
       <TopbarMobile
         isHamburgerMenuActive={isHamburgerMenuActive}
+        countryFlag={getCurrentLanguageCountryFlag()}
+        onChangeLanguage={handleChangeLanguage}
         onClickMenuIcon={onClickMenuIcon}
       />
     ) : (
-      <TopbarDesktop />
+      <TopbarDesktop
+        countryFlag={getCurrentLanguageCountryFlag()}
+        onChangeLanguage={handleChangeLanguage}
+      />
     )
   )
 }
 
-function TopbarDesktop() {
+interface ITopbarDesktop {
+  onChangeLanguage: () => void;
+  countryFlag: "🇪🇸" | "🇬🇧";
+}
+
+function TopbarDesktop(props: ITopbarDesktop) {
+  const { onChangeLanguage, countryFlag } = props
   return (
     <header className="topbar-desktop">
       <div className="topbar-column-one">
@@ -41,6 +77,14 @@ function TopbarDesktop() {
             </div>
           );
         })}
+        <button
+          className='fs-2'
+          style={{ all: 'unset', cursor: 'pointer', marginLeft: '10px' }}
+          onClick={onChangeLanguage}
+        >
+          <span className='country-flag'>{countryFlag}</span>
+        </button>
+        <span></span>
       </div>
     </header>
   )
@@ -48,7 +92,7 @@ function TopbarDesktop() {
 
 
 function TopbarMobile(props: IITopbar) {
-  const { onClickMenuIcon, isHamburgerMenuActive } = props
+  const { onClickMenuIcon, isHamburgerMenuActive, onChangeLanguage, countryFlag } = props
 
   return (
     <header className="topbar-mobile">
@@ -56,7 +100,13 @@ function TopbarMobile(props: IITopbar) {
         <div className="hamburger-menu-icon-container">
           <HamburgerMenuIcon isActive={isHamburgerMenuActive} onClick={onClickMenuIcon} />
         </div>
-        <div className="topbar-circle-initials">D</div>
+        <button
+          className='fs-2'
+          style={{ all: 'unset', cursor: 'pointer', marginLeft: '10px' }}
+          onClick={onChangeLanguage}
+        >
+          <span className='country-flag'>{countryFlag}</span>
+        </button>
       </div>
     </header>
   )

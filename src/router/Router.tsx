@@ -15,6 +15,7 @@ export default function Router() {
     <TransitionGroup>
       <CSSTransition key={location.key} classNames="my-node" timeout={1000}>
         <Routes>
+          <Route path="/" element={<AboutMe />} />
           <Route path={aboutMe.path} element={<AboutMe />} />
           <Route path={resume.path} element={<Resume />} />
           <Route path={portfolio.path} element={<Portfolio />} />
