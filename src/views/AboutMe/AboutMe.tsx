@@ -57,8 +57,8 @@ export default function AboutMe() {
               btn-lg btn-go-see-resume ${timeOutGoResume ? 'visible' : 'hidden'}
             `}
           >
-            <span className="mx-2">
-              Check some of my work
+            <span className="mx-2 fs-6">
+              Check out some of my work
             </span>
             <i className="fa-solid fa-arrow-right" />
           </button>

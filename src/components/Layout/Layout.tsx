@@ -3,6 +3,7 @@ import { Sidebar } from './Sidebar'
 import Topbar from './Topbar'
 import { useMobile } from '@/hooks/useMobile'
 import './css/Layout.css'
+import Footer from './Footer'
 
 export interface ILayout {
   children: ReactElement;
@@ -32,6 +33,7 @@ function Layout(props: ILayout) {
       <Topbar onClickMenuIcon={handleClickMenuIcon} isHamburgerMenuActive={isSidebarVisible} />
       <Sidebar isVisible={isSidebarVisible} onClickMenuItem={handleClickMenuItem} />
       <div className='content'>{children}</div>
+      <Footer />
     </>
   )
 }

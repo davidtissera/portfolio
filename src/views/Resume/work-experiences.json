@@ -22,7 +22,7 @@
     "activity_date": "June 2021 - December 2021",
     "type": "Frontend",
     "website": "https://provantagex.com",
-    "about": "Working on feature implementation, maintenance and production support for an application used for media industry. The application is oriented to optimize the way clients such as radio or television stations buy advertisements",
+    "about": "Working on feature implementation, maintenance and production support for an application used for media industry. The application is oriented to optimize the way clients such as radio or television stations buy advertisements.",
     "technologies_involved": ["ReactJS", "BaoBab", "JavaScript", "TypeScript"],
     "work_methodologies": ["Scrum", "Agile"]
   },

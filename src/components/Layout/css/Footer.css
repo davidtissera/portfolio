@@ -1,0 +1,32 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgb(201, 201, 201);
+}
+
+.designed-by, .social-media {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.designed-by {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    height: 70px;
+  }
+  .designed-by, .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
