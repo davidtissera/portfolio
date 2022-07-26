@@ -32,15 +32,7 @@ export default function Contact() {
     }
     const { serviceId, templateId, publicKey } = emailJSConfig
     try {
-      // await emailjs.send(serviceId, templateId, formData, publicKey)
-      const promise = new Promise((resolve, reject) => {
-        setTimeout(() => {
-          console.log('mensage sent')
-          // resolve('success')
-          reject('error')
-        }, 2000)
-      })
-      await promise
+      await emailjs.send(serviceId, templateId, formData, publicKey)
       setSendingEmail(false)
       const toastSuccessOptions: ToastOptions = {
         ...TOAST_OPTIONS,
