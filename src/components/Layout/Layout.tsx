@@ -31,8 +31,8 @@ function Layout(props: ILayout) {
   return (
     <>
       <Topbar onClickMenuIcon={handleClickMenuIcon} isHamburgerMenuActive={isSidebarVisible} />
-      <Sidebar isVisible={isSidebarVisible} onClickMenuItem={handleClickMenuItem} />
-      <div className='content'>
+      <div className="content">
+        <Sidebar isVisible={isSidebarVisible} onClickMenuItem={handleClickMenuItem} />
         {children}
         <Footer />
       </div>

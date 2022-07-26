@@ -8,14 +8,12 @@ import { Link } from 'react-router-dom';
 import { toast, ToastOptions } from 'react-toastify';
 import { TOAST_OPTIONS } from '@/common/global';
 
-export interface IITopbar {
+export interface ITopbar {
   onClickMenuIcon: ReactEventHandler;
   isHamburgerMenuActive: boolean;
-  onChangeLanguage: () => void;
-  countryFlag: "🇪🇸" | "🇬🇧";
 }
 
-function Topbar(props: IITopbar) {
+function Topbar(props: ITopbar) {
   const { onClickMenuIcon, isHamburgerMenuActive } = props
   const isMobile = useMobile()
 
@@ -98,8 +96,9 @@ function TopbarDesktop(props: ITopbarDesktop) {
   )
 }
 
+interface ITopbarMobile extends ITopbar, ITopbarDesktop{}
 
-function TopbarMobile(props: IITopbar) {
+function TopbarMobile(props: ITopbarMobile) {
   const { onClickMenuIcon, isHamburgerMenuActive, onChangeLanguage, countryFlag } = props
 
   return (

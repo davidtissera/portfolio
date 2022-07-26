@@ -21,7 +21,7 @@ export default function WorkExperience(props: IWorkExperience) {
     <div>
       <span className="badge text-bg-primary">{activityDate}</span>
       <span className="badge text-bg-secondary mx-2">{type}</span>
-      <h2 className="fw-bolder mt-1 mb-0">{title}</h2>
+      <h2 className="fs-3 fw-bolder my-2">{title}</h2>
       <button
         className="website btn btn-link fw-semibold"
         onClick={() => handleClickWebsite(website)}

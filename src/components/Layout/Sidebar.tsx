@@ -15,18 +15,20 @@ export function Sidebar(props: ISidebar) {
 
   return (
     <div className={`sidebar-container${!isVisible ? ' hidden' : ''}`}>
-      <ul className={`sidebar-routes-list${!isVisible ? ' hidden' : ''}`}>
-        {routes.map((route) => {
-          return (
-            <li className="sidebar-routes-list-item" key={route.path}>
-              <div className="sidebar-icon-container">
-                <i className={`fa-solid ${route.icon}`} />
-              </div>
-              <Link onClick={onClickMenuItem} to={route.path}>{t(route.label)}</Link>
-            </li>
-          )
-        })}
-      </ul>
+      <div className={`sidebar-container-background${!isVisible ? ' hidden' : ''}`}>
+        <ul className={`sidebar-routes-list${!isVisible ? ' hidden' : ''}`}>
+          {routes.map((route) => {
+            return (
+              <li className="sidebar-routes-list-item" key={route.path}>
+                <h1>{route.icon}</h1>
+                <Link onClick={onClickMenuItem} to={route.path}>
+                  {t(route.label)}
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
     </div>
   )
 }

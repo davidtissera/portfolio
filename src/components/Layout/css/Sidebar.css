@@ -1,28 +1,44 @@
 .sidebar-container {
-  width: 50%;
-  height: 100vh;
   position: absolute;
-  top: 50px;
+  top: -50px;
+  width: 100%;
+  height: 100%;
   z-index: 1000;
   box-shadow: rgba(100, 100, 111, 0.2) 10px 50px 29px 10px;
-  background-color: white;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+.sidebar-container.hidden {
+  background: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.sidebar-container-background.hidden {
+  width: 0;
+}
+
+.sidebar-container-background {
   transition: width 0.5s ease;
   -webkit-transition: width 0.5s ease;
   -moz-transition: width 0.5s ease;
   -o-transition: width 0.5s ease;
-}
-
-.sidebar-container.hidden {
-  width: 0;
+  width: 50%;
+  height: 100%;
+  background: rgb(252, 252, 252);
 }
 
 .sidebar-routes-list {
+  width: 100%;
+  height: 100%;
   all: unset;
   opacity: 1;
-  transition: opacity 1s ease;
-  -webkit-transition: opacity 1s ease;
-  -moz-transition: opacity 1s ease;
-  -o-transition: opacity 1s ease;
+  transition: opacity 3s ease;
+  -webkit-transition: opacity 3s ease;
+  -moz-transition: opacity 3s ease;
+  -o-transition: opacity 3s ease;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -41,10 +57,10 @@
   justify-content: flex-start;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   cursor: pointer;
-  width: 260px;
+  width: 100%;
   padding: 0 15px;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 600;
   line-height: 50px;
   opacity: 0.8;
 }
@@ -60,11 +76,4 @@
 .sidebar-routes-list-item > a {
   all: unset;
   margin-left: 6px;
-}
-
-.sidebar-icon-container {
-  width: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
