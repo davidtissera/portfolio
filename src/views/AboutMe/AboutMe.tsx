@@ -21,7 +21,7 @@ export default function AboutMe() {
   }
 
   return (
-    <div className="container mt-0 mt-md-2 p-4 pt-0">
+    <div className="container-lg mt-0 mt-md-2 p-4 pt-0">
       <div className="row">
         <div className="d-flex align-items-center justify-content-center col-lg-5 col-md-12 col-sm-12">
           <img className="myself" src={mySelfPhoto} alt="Man with sunglasses" />

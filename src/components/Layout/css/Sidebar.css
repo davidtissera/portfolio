@@ -11,6 +11,7 @@
 }
 
 .sidebar-container.hidden {
+  width: 0;
   background: none;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
