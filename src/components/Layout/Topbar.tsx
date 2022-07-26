@@ -5,6 +5,8 @@ import { useMobile } from '@/hooks/useMobile';
 import { HamburgerMenuIcon } from '@/components/HamburgerMenuIcon';
 import './css/Topbar.css'
 import { Link } from 'react-router-dom';
+import { toast, ToastOptions } from 'react-toastify';
+import { TOAST_OPTIONS } from '@/common/global';
 
 export interface IITopbar {
   onClickMenuIcon: ReactEventHandler;
@@ -17,7 +19,7 @@ function Topbar(props: IITopbar) {
   const { onClickMenuIcon, isHamburgerMenuActive } = props
   const isMobile = useMobile()
 
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const languages = [
     { language: 'en', flag: "🇬🇧" },
@@ -31,10 +33,16 @@ function Topbar(props: IITopbar) {
   }
 
   const handleChangeLanguage = () => {
+    const toastOptions: ToastOptions = {
+      ...TOAST_OPTIONS,
+      type: 'info'
+    }
     if (i18n.language === 'es') {
       i18n.changeLanguage('en')
+      toast(`${t('topbar.language_changed_to')} English`, toastOptions)
     } else {
       i18n.changeLanguage('es')
+      toast(`${t('topbar.language_changed_to')} Español`, toastOptions)
     }
   }
 

@@ -1,8 +1,11 @@
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
+import { toast, ToastOptions } from "react-toastify";
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from "react-hook-form"
+import emailjs from "@emailjs/browser"
+import { TOAST_OPTIONS } from "@/common/global";
 
 export default function Contact() {
   const { t } = useTranslation()
@@ -10,7 +13,7 @@ export default function Contact() {
 
   const validationSchema = yup.object({
     fullname: yup.string().required(),
-    email: yup.string().email().required(),
+    from_email: yup.string().email().required(),
     subject: yup.string().min(5).max(40),
     message: yup.string().min(20)
   })
@@ -20,23 +23,42 @@ export default function Contact() {
     mode: 'onSubmit'
   })
 
-  const handleClickSendMessage = async (formData) => {
-    console.log(formData)
+  const handleClickSendMessage = async (formData: any) => {
     setSendingEmail(true)
-  
-    const promise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve('message sent')
-        console.log('message sent')
-        setSendingEmail(false)
-      }, 3000)
-    })
-
-    await promise
+    const emailJSConfig = {
+      serviceId: 'service_qyyj48m',
+      templateId: 'template_l3g64uc',
+      publicKey: 'qQb8x6oRs0mvx5H7R'
+    }
+    const { serviceId, templateId, publicKey } = emailJSConfig
+    try {
+      // await emailjs.send(serviceId, templateId, formData, publicKey)
+      const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log('mensage sent')
+          // resolve('success')
+          reject('error')
+        }, 2000)
+      })
+      await promise
+      setSendingEmail(false)
+      const toastSuccessOptions: ToastOptions = {
+        ...TOAST_OPTIONS,
+        type: "success",
+      }
+      toast(t('contact.form.email_sent_successfully'), toastSuccessOptions)
+    } catch (error) {
+      const toastErrorOptions: ToastOptions = {
+        ...TOAST_OPTIONS,
+        type: "error",
+      }
+      toast(t('contact.form.email_not_sent_successfully'), toastErrorOptions)
+      setSendingEmail(false)
+    }
   }
 
   return (
-    <div className="container">
+    <div className="container mt-2">
       <h1 className="text-center">{`${t('contact.contact_me')} 😁 !`}</h1>
       <form
         onSubmit={handleSubmit(handleClickSendMessage)}
@@ -66,13 +88,13 @@ export default function Contact() {
                   type="text"
                   placeholder={t('contact.form.your_email_address')}
                   aria-label={t('contact.form.your_email_address')}
-                  {...register("email")}
+                  {...register("from_email")}
                   className={`
                     form-control
-                    ${errors.email ? 'is-invalid' : ''}
+                    ${errors.from_email ? 'is-invalid' : ''}
                   `}
                 />
-                <div className="text-capitalize invalid-feedback">{(errors.email?.message) as unknown as string}</div>
+                <div className="text-capitalize invalid-feedback">{(errors.from_email?.message) as unknown as string}</div>
               </div>
               <div className="w-100 mt-4 mb-4">
                 <input
@@ -124,6 +146,12 @@ export default function Contact() {
                 )}
                 <span className="mx-2">{t('contact.form.send_message')}</span>
               </button>
+            </div>
+            <div className="toast-container position-fixed bottom-0 end-0 p-3">
+              <div id="liveToast" className="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div className="toast-header">Envío de email</div>
+                <div className="toast-body">Email enviado satisfactoriamente</div>
+              </div>
             </div>
           </div>
         </div>

@@ -6,6 +6,9 @@
       "portfolio": "Portafolio",
       "contact": "Contacto"
     },
+    "topbar": {
+      "language_changed_to": "El Idioma fue cambiado al"
+    },
     "footer": {
       "designed_and_programmed_by_david_alejandro_tissera": "Diseño & Programación por David Alejandro Tissera"
     },
@@ -48,7 +51,9 @@
         "your_email_address": "Dirección de email",
         "subject": "Asunto",
         "leave_your_message": "Escribe tu mensaje",
-        "send_message": "Enviar email"
+        "send_message": "Enviar email",
+        "email_sent_successfully": "El email fué enviado exitosamente",
+        "email_not_sent_successfully": "Ocurrió un error inesperado al enviar el email"
       }
     }
   }

@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import LoadingDotFlashing from '@/components/LoadingDotFlashing'
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Layout from './components/Layout/Layout'
 import Router from './router/Router'
 
@@ -24,6 +26,7 @@ function App() {
       <Layout>
         <Router />
       </Layout>
+      <ToastContainer />
     </BrowserRouter>
   )
 }
