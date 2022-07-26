@@ -1,6 +1,8 @@
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function Contact() {
+  const { t } = useTranslation()
   const [isSendingEmail, setSendingEmail] = useState(false)
   const handleClickSendMessage = async () => {
     setSendingEmail(true)
@@ -18,18 +20,36 @@ export default function Contact() {
 
   return (
     <div className="container">
-      <h1 className="text-center">Contact Me!</h1>
+      <h1 className="text-center">{`${t('contact.contact_me')} 😁 !`}</h1>
       <div className="d-flex align-items-center justify-content-center mt-5">
         <div className="d-flex justify-content-center row container-sm">
           <div className="col-sm-12 col-md-5">
             <div className="w-100">
-              <input id="fullname" type="text" className="form-control" placeholder="Full Name" aria-label="Full Name" />
+              <input
+                id="fullname"
+                type="text"
+                className="form-control"
+                placeholder={t('contact.form.full_name')}
+                aria-label={t('contact.form.full_name')}
+              />
             </div>
             <div className="w-100 mt-4">
-              <input id="email" type="text" className="form-control" placeholder="Your Email Address" aria-label="Your Email Address" />
+              <input
+                id="email"
+                type="text"
+                className="form-control"
+                placeholder={t('contact.form.your_email_address')}
+                aria-label={t('contact.form.your_email_address')}
+              />
             </div>
             <div className="w-100 mt-4 mb-4">
-              <input id="subject" type="text" className="form-control" placeholder="Subject" aria-label="Subject" />
+              <input
+                id="subject"
+                type="text"
+                className="form-control"
+                placeholder={t('contact.form.subject')}
+                aria-label={t('contact.form.subject')}
+              />
             </div>
           </div>
           <div className="col-sm-12 col-md-7">
@@ -37,8 +57,8 @@ export default function Contact() {
               <textarea
                 id="message"
                 className="form-control"
-                placeholder="Leave your Message!"
-                aria-label="Leave your Message!"
+                placeholder={t('contact.form.leave_your_message')}
+                aria-label={t('contact.form.leave_your_message')}
                 rows={6}
                 cols={20}
               />
@@ -60,7 +80,7 @@ export default function Contact() {
                   <span className="visually-hidden">Loading...</span>
                 </div>
               )}
-              <span className="mx-2">Send Message</span>
+              <span className="mx-2">{t('contact.form.send_message')}</span>
             </button>
           </div>
         </div>

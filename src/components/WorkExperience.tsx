@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import './css/WorkExperience.css'
 export interface IWorkExperience {
   title: string;
@@ -9,6 +10,7 @@ export interface IWorkExperience {
 }
 
 export default function WorkExperience(props: IWorkExperience) {
+  const { t } = useTranslation()
   const { title, website, activityDate, about, technologiesInvolved, type } = props
 
   const handleClickWebsite = (urlWebSite: string) => {
@@ -29,7 +31,7 @@ export default function WorkExperience(props: IWorkExperience) {
       </button>
       <p className="fs-6 text-muted mt-3 mb-3">{about}</p>
       <small className="text-decoration-underline fw-bold">
-        Technologies used:
+        {t('resume.technologies_used').concat(':')}
       </small>
       <small className="technologies-used"> {technologiesInvolved.join(" - ")}</small>
     </div>

@@ -25,7 +25,6 @@ function Topbar(props: IITopbar) {
   ]
 
   const getCurrentLanguageCountryFlag = () => {
-    console.log('i18n.language', i18n.language)
     const flag = languages.filter((l) => i18n.language.includes(l.language))[0].flag as "🇪🇸" | "🇬🇧"
 
     return flag
@@ -62,6 +61,7 @@ interface ITopbarDesktop {
 }
 
 function TopbarDesktop(props: ITopbarDesktop) {
+  const { t } = useTranslation()
   const { onChangeLanguage, countryFlag } = props
   return (
     <header className="topbar-desktop">
@@ -73,7 +73,7 @@ function TopbarDesktop(props: ITopbarDesktop) {
         {routes.map((route: IRoute) => {
           return (
             <div key={route.path} className="topbar-menu-item">
-              <Link to={route.path}>{route.label}</Link>
+              <Link to={route.path}>{t(route.label)}</Link>
             </div>
           );
         })}

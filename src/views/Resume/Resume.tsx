@@ -8,10 +8,11 @@ export default function Resume() {
 
   return (
     <div className="container py-2">
-      <h1 className="fw-bold text-start mb-4">💻 {t('words.work_experiences')}</h1>
+      <h1 className="fw-bold text-start mb-4">💻 {t('resume.work_experiences')}</h1>
       <div>
         {workExperiences.map(({
           name,
+          translation_key: translationKey,
           website,
           activity_date: activityDate,
           about,
@@ -21,12 +22,12 @@ export default function Resume() {
           return (
             <div className="my-5">
               <WorkExperience
-                key={name}
+                key={translationKey}
                 title={name}
                 website={website}
                 type={type}
-                activityDate={activityDate}
-                about={about}
+                activityDate={t(`resume.${translationKey}.activity_date`)}
+                about={t(`resume.${translationKey}.about`)}
                 technologiesInvolved={technologiesInvolved}
               />
             </div>

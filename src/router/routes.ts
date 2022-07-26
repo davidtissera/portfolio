@@ -17,8 +17,8 @@ class Route {
 }
 
 export const routes: IRoute[] = [
-  new Route('About me', '/about', 'fa-user'),
-  new Route('Resume', '/resume', 'fa-file-lines'),
-  new Route('Portfolio', '/portfolio', 'fa-briefcase'),
-  new Route('Contact', '/contact', 'fa-address-book'),
+  new Route('routes.about_me', '/about', 'fa-user'),
+  new Route('routes.resume', '/resume', 'fa-file-lines'),
+  new Route('routes.portfolio', '/portfolio', 'fa-briefcase'),
+  new Route('routes.contact', '/contact', 'fa-address-book'),
 ];

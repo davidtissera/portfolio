@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next'
 import './css/Footer.css'
 
 export default function Footer() {
+  const { t } = useTranslation()
   const socialMedia = [
     { name: "Github", icon: "fa-brands fa-github", link: 'https://github.com/davidtissera/' },
     { name: "Linkedin", icon: "fa-brands fa-linkedin", link: 'https://www.linkedin.com/in/david-tissera-6745b71ab/' },
@@ -28,7 +30,7 @@ export default function Footer() {
           })}
         </div>
         <div className='designed-by col-sm-12 col-md-6'>
-          <small>Designed & Programmed by David Alejandro Tissera</small>
+          <small>{t('footer.designed_and_programmed_by_david_alejandro_tissera')}</small>
         </div>
       </div>
     </footer>

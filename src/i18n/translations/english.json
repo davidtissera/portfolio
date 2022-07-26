@@ -1,7 +1,54 @@
 {
   "translations": {
-    "words": {
-      "work_experiences": "Work experiences"
+    "routes": {
+      "about_me": "About me",
+      "resume": "Resume",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "footer": {
+      "designed_and_programmed_by_david_alejandro_tissera": "Designed & Programmed by David Alejandro Tissera"
+    },
+    "about_me": {
+      "profession": "Software developer",
+      "paragraphs": {
+        "one": "Hi there! 👋, my name is David.",
+        "two": "I am a Software Developer based in Rosario, Santa Fe, Argentina 🇦🇷.",
+        "three": "I have been working 👨🏻‍💻 since four years designing and developing all kind of software products.",
+        "four": "When I develop any software I consider very important to focus on code quality, to achieve this, I believe that it is vital to use the best practices, be consistent, be aware of latest technologies and not be afraid of change 💪🏼.",
+        "five": "I believe that programming is an amazing discipline that allows us to create almost everything and play with our imagination 🌈 without any barriers, this is why I choose it every single day."
+      },
+      "check_some_of_my_work_experiences": "Check some of my work experiences"
+    },
+    "resume": {
+      "work_experiences": "Work experiences",
+      "technologies_used": "Technologies used",
+      "rbi": {
+        "activity_date": "March 2022 - Present",
+        "about": "Working on improvements on the performance, scalability and user experience of a backoffice application used world-wide by many employees of different fast-food restaurant chains like Burger King, Tim Hortons, Popeyes, etc."
+      },
+      "killburn": {
+        "activity_date": "December 2021 - March 2022",
+        "about": "Working on some feature implementations for an application used for children's games such as NERF Challenge, Skeegolf, Basketball, etc. The application does all the administration part of the games such as creation of groups, players, game time, credits, etc."
+      },
+      "provantagex": {
+        "activity_date": "June 2021 - December 2021",
+        "about": "Working on feature implementation, maintenance and production support for an application used for media industry. The application is oriented to optimize the way clients such as radio or television stations buy advertisements."
+      },
+      "poincenot": {
+        "activity_date": "February 2020 - June 2021",
+        "about": "Working on feature implementations for a white-label application related to financial regulation. The application provides a white label solution for financial institutions looking for more accurate information about their clients and analysis of that information in terms of variables such as credit risk, fraud detection, politically exposed persons, etc."
+      }
+    },
+    "contact": {
+      "contact_me": "Contact me",
+      "form": {
+        "full_name": "Full name",
+        "your_email_address": "Your email address",
+        "subject": "Subject",
+        "leave_your_message": "Leave your message",
+        "send_message": "Send message"
+      }
     }
   }
 }

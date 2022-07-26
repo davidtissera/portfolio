@@ -1,6 +1,7 @@
 [
   {
     "name": "Restaurant Brands International",
+    "translation_key": "rbi",
     "activity_date": "March 2022 - Present",
     "type": "Frontend",
     "website": "https://santexgroup.com",
@@ -10,6 +11,7 @@
   },
   {
     "name": "Killburn Live LLC",
+    "translation_key": "killburn",
     "activity_date": "December 2021 - March 2022",
     "type": "Fullstack",
     "website": "https://www.kilburnlive.com",
@@ -19,6 +21,7 @@
   },
   {
     "name": "ProvantageX",
+    "translation_key": "provantagex",
     "activity_date": "June 2021 - December 2021",
     "type": "Frontend",
     "website": "https://provantagex.com",
@@ -29,6 +32,7 @@
   {
     "name": "Poincenot Technology Studio",
     "activity_date": "February 2020 - June 2021",
+    "translation_key": "poincenot",
     "type": "Frontend",
     "website": "https://poincenot.com",
     "about": "Working on feature implementations for a white-label application related to financial regulation. The application provides a white label solution for financial institutions looking for more accurate information about their clients and analysis of that information in terms of variables such as credit risk, fraud detection, politically exposed persons, etc.",

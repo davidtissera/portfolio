@@ -1,5 +1,6 @@
 import { routes } from '@/router/routes'
 import { ReactEventHandler } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom'
 import './css/Sidebar.css'
 
@@ -9,6 +10,7 @@ interface ISidebar {
 }
 
 export function Sidebar(props: ISidebar) {
+  const { t } = useTranslation()
   const { isVisible, onClickMenuItem } = props;
 
   return (
@@ -20,7 +22,7 @@ export function Sidebar(props: ISidebar) {
               <div className="sidebar-icon-container">
                 <i className={`fa-solid ${route.icon}`} />
               </div>
-              <Link onClick={onClickMenuItem} to={route.path}>{route.label}</Link>
+              <Link onClick={onClickMenuItem} to={route.path}>{t(route.label)}</Link>
             </li>
           )
         })}

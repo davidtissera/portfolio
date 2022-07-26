@@ -1,7 +1,55 @@
 {
   "translations": {
-    "words": {
-      "work_experiences": "Experiencia laboral"
+    "routes": {
+      "about_me": "Acerca de mí",
+      "resume": "Resumen",
+      "portfolio": "Portafolio",
+      "contact": "Contacto"
+    },
+    "footer": {
+      "designed_and_programmed_by_david_alejandro_tissera": "Diseño & Programación por David Alejandro Tissera"
+    },
+    "about_me": {
+      "profession": "Desarrollador de software",
+      "paragraphs": {
+        "one": "Hola! 👋, Mi nombre es David.",
+        "two": "Soy un Desarrollador de software radicado en Rosario, Santa Fe, Argentina 🇦🇷.",
+        "three": "Llevo trabajando 👨🏻‍💻 desde hace cuatro años diseñando y desarrollando todo tipo de productos de software.",
+        "four": "Cuando desarrollo cualquier software considero muy importante hacer foco en la calidad del código, por eso creo que para lograrlo es vital utilizar las mejores prácticas, ser consistentes, estar al tanto de las últimas tecnologías y no tenerle miedo al cambio 💪🏼.",
+        "five": "Creo que la programación es una disciplina increíble que nos permite crear casi cualquier cosa y jugar con nuestra imaginación 🌈 sin ninguna barrera, es por eso que la elijo cada día de mi vida."
+      },
+      "check_some_of_my_work_experiences": "Ver mis experiencias laborales"
+    },
+    "resume": {
+      "work_experiences": "Experiencia laboral",
+      "technologies_used": "Technologías involucradas",
+      "rbi": {
+        "activity_date": "Marzo 2022 - Presente",
+        "about": "Se realizaron mejoras en la performance, escalabilidad y experiencia de usuario para una aplicación de backoffice usada mundialmente por empleados de diferentes cadenas de restaurantes de comida rápida tales como Burger King, Tim Hortons, Popeyes, etc."
+      },
+      "killburn": {
+        "activity_date": "Diciembre 2021 - Marzo 2022",
+        "about": "Se realizaron implementaciones de nuevos features para una aplicación destinada a juegos para niños tales como NERF Challenge, Skeegolf, Baloncesto, etc. La aplicación está destinada a todo lo que abarca la administración de estos juegos asi como la creación de grupos y jugadores, tiempo de juego, créditos, etc."
+      },
+      "provantagex": {
+        "activity_date": "Junio 2021 - Diciembre 2021",
+        "about": "Se realizó la implementación de nuevos features, mantenimiento general y soporte a producción para una aplicación utilizada por la industria de los medios de comunicación de los Estados Unidos. La aplicación está orientada a optimizar la forma en la que los clientes tales como estaciones de radio y/o televisión, compran espacio publicitario."
+      },
+      "poincenot": {
+        "activity_date": "Febrero 2020 - Junio 2021",
+        "about": "Se realizó la implementación de nuevos features para una aplicación de marca blanca relacionada al mundo de la regulación financiera. La aplicación tiene como objetivo principal proveer una solución adaptable para instituciones financieras y bancarias que buscan obtener información precisa de sus clientes y el análisis de la misma en términos de variables tales como riesgo crediticio, detección de fraude, detección de personas expuestas políticamente, etc."
+      }
+    },
+    "contact": {
+      "link": "Contacto",
+      "contact_me": "Contáctame",
+      "form": {
+        "full_name": "Nombre completo",
+        "your_email_address": "Dirección de email",
+        "subject": "Asunto",
+        "leave_your_message": "Escribe tu mensaje",
+        "send_message": "Enviar email"
+      }
     }
   }
 }

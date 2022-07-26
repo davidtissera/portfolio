@@ -1,21 +1,13 @@
 import { useEffect, useState } from "react";
-import about from './about.txt'
+import { useTranslation } from "react-i18next";
 import mySelfPhoto from '../../assets/davo.jpg'
 import './css/AboutMe.scss'
 import { useNavigate } from "react-router-dom";
 
 export default function AboutMe() {
+  const { t } = useTranslation()
   const [timeOutGoResume, setTimeoutGoResume] = useState(false)
   const navigate = useNavigate()
-  const [aboutTextParagraphs, setAboutTextParagraphs] = useState<string[]>([])
-
-  const doFetchText =  () => {
-    fetch(about)
-      .then(response => response.text())
-      .then(text => {
-        setAboutTextParagraphs(text.split('\n'))
-      })
-  }
 
   useEffect(() => {
     const TIMEOUT_MSECS = 3000
@@ -23,10 +15,6 @@ export default function AboutMe() {
       setTimeoutGoResume(true)
     }, TIMEOUT_MSECS)
   }, [])
-
-  useEffect(() => {
-    doFetchText()
-  }, [about])
 
   const handleClickGoResume = () => {
     navigate('/resume')
@@ -40,11 +28,11 @@ export default function AboutMe() {
         </div>
         <div className="col-lg-7 col-md-12 col-sm-12 mt-5">
           <h1 className="name">David <span>Alejandro</span> Tissera</h1>
-          <div className="profession mt-2">Software developer</div>
+          <div className="profession mt-2">{t('about_me.profession')}</div>
           <div className="mt-4">
-            {aboutTextParagraphs.map((paragraph) => {
+            {['one', 'two', 'three', 'four', 'five'].map((paragraphNumber) => {
               return (
-                <p key={paragraph}>{paragraph}</p>
+                <p key={paragraphNumber}>{t(`about_me.paragraphs.${paragraphNumber}`)}</p>
               )
             })}
           </div>
@@ -58,7 +46,7 @@ export default function AboutMe() {
             `}
           >
             <span className="mx-2 fs-6">
-              Check some of my work experiences
+              {t('about_me.check_some_of_my_work_experiences')}
             </span>
             <i className="fa-solid fa-arrow-right" />
           </button>
