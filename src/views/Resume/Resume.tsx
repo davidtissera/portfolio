@@ -20,9 +20,8 @@ export default function Resume() {
           technologies_involved: technologiesInvolved
         }) => {
           return (
-            <div className="mb-5">
+            <div key={translationKey} className="mb-5">
               <WorkExperience
-                key={translationKey}
                 title={name}
                 website={website}
                 type={type}

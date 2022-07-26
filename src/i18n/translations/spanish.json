@@ -10,7 +10,7 @@
       "language_changed_to": "El Idioma fue cambiado al"
     },
     "footer": {
-      "designed_and_programmed_by_david_alejandro_tissera": "Diseño & Programación por David Alejandro Tissera"
+      "designed_and_programmed_by_david_tissera": "Diseño & Programación por David Tissera"
     },
     "about_me": {
       "profession": "Desarrollador de software",
@@ -25,7 +25,7 @@
     },
     "resume": {
       "work_experiences": "Experiencia laboral",
-      "technologies_used": "Technologías involucradas",
+      "technologies_used": "Tecnologías involucradas",
       "rbi": {
         "activity_date": "Marzo 2022 - Presente",
         "about": "Se realizaron mejoras en la performance, escalabilidad y experiencia de usuario para una aplicación de backoffice usada mundialmente por empleados de diferentes cadenas de restaurantes de comida rápida tales como Burger King, Tim Hortons, Popeyes, etc."

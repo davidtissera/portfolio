@@ -6,3 +6,11 @@ button.website {
   all: unset;
   cursor: pointer;
 }
+
+a.website-text {
+  all: unset;
+}
+
+a.website-text:hover {
+  color: blue;
+}

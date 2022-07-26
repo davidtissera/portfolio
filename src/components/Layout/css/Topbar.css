@@ -33,11 +33,16 @@
 button > span.country-flag {
   transition: font-size 0.8s ease-out;
   -webkit-transition: font-size 0.8s ease-out;
+  -moz-transition: font-size 0.8s ease-out;
+  -o-transition: font-size 0.8s ease-out;
   font-size: 35px;
 }
 
 button:active > span.country-flag {
   transition: font-size 0.1s ease-in;
+  -webkit-transition: font-size 0.1s ease-in;
+  -moz-transition: font-size 0.1s ease-in;
+  -o-transition: font-size 0.1s ease-in;
   font-size: 50px;
 }
 

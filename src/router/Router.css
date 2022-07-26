@@ -4,6 +4,9 @@
 .my-node-enter-active {
   opacity: 1;
   transition: opacity 500ms;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
 }
 .my-node-exit {
   opacity: 1;
@@ -11,4 +14,7 @@
 .my-node-exit-active {
   opacity: 0;
   transition: opacity 500ms;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
 }

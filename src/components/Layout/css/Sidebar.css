@@ -27,6 +27,7 @@
   -moz-transition: width 0.5s ease;
   -o-transition: width 0.5s ease;
   width: 50%;
+  max-width: 230px;
   height: 100%;
   background: rgb(252, 252, 252);
 }
@@ -36,10 +37,10 @@
   height: 100%;
   all: unset;
   opacity: 1;
-  transition: opacity 3s ease;
-  -webkit-transition: opacity 3s ease;
-  -moz-transition: opacity 3s ease;
-  -o-transition: opacity 3s ease;
+  transition: opacity 1.5s ease;
+  -webkit-transition: opacity 1.5s ease;
+  -moz-transition: opacity 1.5s ease;
+  -o-transition: opacity 1.5s ease;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

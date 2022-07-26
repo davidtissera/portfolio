@@ -30,7 +30,7 @@ export default function Footer() {
           })}
         </div>
         <div className='designed-by col-sm-12 col-md-6'>
-          <small>{t('footer.designed_and_programmed_by_david_alejandro_tissera')}</small>
+          <small>{t('footer.designed_and_programmed_by_david_tissera')}</small>
         </div>
       </div>
     </footer>

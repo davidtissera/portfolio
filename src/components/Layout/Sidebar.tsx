@@ -20,7 +20,7 @@ export function Sidebar(props: ISidebar) {
           {routes.map((route) => {
             return (
               <li className="sidebar-routes-list-item" key={route.path}>
-                <h1>{route.icon}</h1>
+                <i className={route.icon} />
                 <Link onClick={onClickMenuItem} to={route.path}>
                   {t(route.label)}
                 </Link>
