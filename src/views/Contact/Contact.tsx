@@ -12,10 +12,22 @@ export default function Contact() {
   const [isSendingEmail, setSendingEmail] = useState(false)
 
   const validationSchema = yup.object({
-    fullname: yup.string().required(),
-    from_email: yup.string().email().required(),
-    subject: yup.string().min(5).max(40),
-    message: yup.string().min(20)
+    fullname: yup
+      .string()
+      .required('contact.form.errors.required_field'),
+    from_email: yup
+      .string()
+      .email('contact.form.errors.email_invalid')
+      .required('contact.form.errors.required_field'),
+    subject: yup
+      .string()
+      .required('contact.form.errors.required_field')
+      .min(5, 'contact.form.errors.min_chars')
+      .max(40, 'contact.form.errors.max_chars'),
+    message: yup
+      .string()
+      .required('contact.form.errors.required_field')
+      .min(20, 'contact.form.errors.min_chars')
   })
 
   const { register, handleSubmit, formState: { errors } } = useForm({
@@ -72,7 +84,7 @@ export default function Contact() {
                     ${errors.fullname ? 'is-invalid' : ''}
                   `}
                 />
-                <div className="text-capitalize invalid-feedback">{(errors.fullname?.message) as unknown as string}</div>
+                <div className="invalid-feedback">{t(errors.fullname?.message as unknown as string)}</div>
               </div>
               <div className="w-100 mt-4">
                 <input
@@ -86,7 +98,7 @@ export default function Contact() {
                     ${errors.from_email ? 'is-invalid' : ''}
                   `}
                 />
-                <div className="text-capitalize invalid-feedback">{(errors.from_email?.message) as unknown as string}</div>
+                <div className="invalid-feedback">{t(errors.from_email?.message as unknown as string)}</div>
               </div>
               <div className="w-100 mt-4 mb-4">
                 <input
@@ -100,7 +112,7 @@ export default function Contact() {
                     ${errors.subject ? 'is-invalid' : ''}
                   `}
                 />
-                <div className="text-capitalize invalid-feedback">{(errors.subject?.message) as unknown as string}</div>
+                <div className="invalid-feedback">{t(errors.subject?.message as unknown as string, { min: '5', max: '40' })}</div>
               </div>
             </div>
             <div className="col-sm-12 col-md-7">
@@ -117,7 +129,7 @@ export default function Contact() {
                     ${errors.message ? 'is-invalid' : ''}
                   `}
                 />
-                <div className="text-capitalize invalid-feedback">{(errors.message?.message) as unknown as string}</div>
+                <div className="invalid-feedback">{t(errors.message?.message as unknown as string, { min: '20' })}</div>
               </div>
             </div>
             <div className="d-flex align-items-center justify-content-center justify-content-md-end col-12 mt-4 mt-md-0">

@@ -52,7 +52,13 @@
         "leave_your_message": "Leave your message",
         "send_message": "Send message",
         "email_sent_successfully": "Email sent successfully",
-        "email_not_sent_successfully": "There was an unexpected error sending the email"
+        "email_not_sent_successfully": "There was an unexpected error sending the email",
+        "errors": {
+          "email_invalid": "The email must be a valid email. e.g.: davidtissera@gmail.com",
+          "min_chars": "The field must be at least {{ min }} characters long",
+          "max_chars": "The field can be up to {{ max }} characters long",
+          "required_field": "The field is required"
+        }
       }
     }
   }

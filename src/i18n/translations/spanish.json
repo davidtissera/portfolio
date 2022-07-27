@@ -53,7 +53,13 @@
         "leave_your_message": "Escribe tu mensaje",
         "send_message": "Enviar email",
         "email_sent_successfully": "El email fué enviado exitosamente",
-        "email_not_sent_successfully": "Ocurrió un error inesperado al enviar el email"
+        "email_not_sent_successfully": "Ocurrió un error inesperado al enviar el email",
+        "errors": {
+          "email_invalid": "El email debe ser un email válido. p. ej. davidtissera@gmail.com",
+          "min_chars": "El campo debe tener al menos {{ min }} caracteres",
+          "max_chars": "El campo puede tener como máximo {{ max }} caracteres",
+          "required_field": "El campo es requerido"
+        }
       }
     }
   }
