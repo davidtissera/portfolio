@@ -1,5 +1,9 @@
 {
   "translations": {
+    "errors": {
+      "page_not_found": "Página no encontrada",
+      "page_under_construction": "Página en construcción"
+    },
     "routes": {
       "about_me": "Acerca de mí",
       "resume": "Resumen",

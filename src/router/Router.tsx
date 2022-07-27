@@ -4,6 +4,7 @@ import AboutMe from "@/views/AboutMe/AboutMe";
 import Resume from "@/views/Resume/Resume";
 import Portfolio from "@/views/Portfolio/Portfolio";
 import Contact from "@/views/Contact/Contact";
+import FourZeroFour from "@/views/FourZeroFour/FourZeroFour";
 import { routes } from './routes';
 import './Router.css'
 
@@ -20,6 +21,7 @@ export default function Router() {
           <Route path={resume.path} element={<Resume />} />
           <Route path={portfolio.path} element={<Portfolio />} />
           <Route path={contact.path} element={<Contact />} />
+          <Route path="*" element={<FourZeroFour />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>
