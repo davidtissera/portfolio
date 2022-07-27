@@ -27,7 +27,7 @@ export default function AboutMe() {
           <img className="myself" src={mySelfPhoto} alt="Man with sunglasses" />
         </div>
         <div className="col-lg-7 col-md-12 col-sm-12 mt-5">
-          <h1 className="name">David <span>Alejandro</span> Tissera</h1>
+          <h1 className="name san-francisco-font">David <span>Alejandro</span> Tissera</h1>
           <div className="profession mt-2">{t('about_me.profession')}</div>
           <div className="mt-4">
             {['one', 'two', 'three', 'four', 'five'].map((paragraphNumber) => {

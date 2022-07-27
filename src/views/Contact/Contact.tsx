@@ -51,7 +51,7 @@ export default function Contact() {
 
   return (
     <div className="container mt-2">
-      <h1 className="text-center">{`${t('contact.contact_me')} 😁 !`}</h1>
+      <h1 className="text-center san-francisco-font">{`${t('contact.contact_me')} 😁 !`}</h1>
       <form
         onSubmit={handleSubmit(handleClickSendMessage)}
         className="row g-3 needs-validation"

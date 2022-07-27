@@ -19,7 +19,7 @@ export default function Footer() {
           {socialMedia.map((socialMedia) => {
             return (
               <button
-                className='social-media-button btn btn-sm btn-link mx-2 fw-bolder'
+                className='social-media-button btn btn-sm btn-link mx-2 fw-bolder san-francisco-font'
                 key={socialMedia.name}
                 onClick={() => handleClickSocialMedia(socialMedia.link)}
               >

@@ -14,7 +14,7 @@ export function Sidebar(props: ISidebar) {
   const { isVisible, onClickMenuItem } = props;
 
   return (
-    <div className={`sidebar-container${!isVisible ? ' hidden' : ''}`}>
+    <div className={`sidebar-container${!isVisible ? ' hidden' : ''} san-francisco-font`}>
       <div className={`sidebar-container-background${!isVisible ? ' hidden' : ''}`}>
         <ul className={`sidebar-routes-list${!isVisible ? ' hidden' : ''}`}>
           {routes.map((route) => {

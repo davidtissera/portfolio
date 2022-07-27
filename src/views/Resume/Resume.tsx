@@ -8,7 +8,7 @@ export default function Resume() {
 
   return (
     <div className="container">
-      <h1 className="fw-semibold text-start mb-3 mb-md-5 mt-md-3">{t('resume.work_experiences')}</h1>
+      <h1 className="fw-semibold text-start mb-3 mb-md-5 mt-md-3 san-francisco-font">{t('resume.work_experiences')}</h1>
       <div>
         {workExperiences.map(({
           name,
