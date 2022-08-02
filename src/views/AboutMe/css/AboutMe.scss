@@ -5,6 +5,12 @@
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 12px 0px;
 }
 
+.image-loading {
+  width: 400px;
+  min-height: 410px;
+  background-color: #eee;
+}
+
 .name {
   font-weight: bolder;
 }
@@ -43,5 +49,11 @@
   .myself {
     width: 250px;
     border-width: 10px;
+  }
+
+  .image-loading {
+    width: 250px;
+    height: 250px;
+    background-color: green;
   }
 }

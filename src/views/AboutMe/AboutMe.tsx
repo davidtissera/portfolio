@@ -5,6 +5,7 @@ import './css/AboutMe.scss'
 import { useNavigate } from "react-router-dom";
 
 export default function AboutMe() {
+  const [imageLoading, setImageLoading] = useState(true)
   const { t } = useTranslation()
   const [timeOutGoResume, setTimeoutGoResume] = useState(false)
   const navigate = useNavigate()
@@ -20,11 +21,15 @@ export default function AboutMe() {
     navigate('/resume')
   }
 
+  const handleLoadImage = () => {
+    setImageLoading(false)
+  }
+
   return (
     <div className="container-lg mt-0 mt-md-2 p-4 pt-0">
       <div className="row">
         <div className="d-flex align-items-center justify-content-center col-lg-5 col-md-12 col-sm-12">
-          <img className="myself" src={mySelfPhoto} alt="Man with sunglasses" />
+          <img className={`myself ${imageLoading ? 'image-loading' : ''}`} src={mySelfPhoto} alt="Man with sunglasses" onLoad={handleLoadImage} />
         </div>
         <div className="col-lg-7 col-md-12 col-sm-12 mt-5">
           <h1 className="name san-francisco-font">David <span>Alejandro</span> Tissera</h1>
