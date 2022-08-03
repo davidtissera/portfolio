@@ -4,6 +4,7 @@ import Topbar from './Topbar'
 import { useMobile } from '@/hooks/useMobile'
 import './css/Layout.css'
 import Footer from './Footer'
+import AutoScroll from './AutoScroll'
 
 export interface ILayout {
   children: ReactElement;
@@ -34,6 +35,7 @@ function Layout(props: ILayout) {
       <div className="content">
         <Sidebar isVisible={isSidebarVisible} onClickMenuItem={handleClickMenuItem} />
         {children}
+        <AutoScroll />
         <Footer />
       </div>
     </>

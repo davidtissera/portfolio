@@ -1,0 +1,16 @@
+button.auto-scroll {
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  z-index: 1004;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+button.auto-scroll.mobile {
+  bottom: 10px;
+}
+
+button.auto-scroll.visible {
+  opacity: 1;
+}
