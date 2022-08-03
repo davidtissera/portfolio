@@ -52,6 +52,7 @@ button:active > span.country-flag {
 }
 
 .topbar-column-one {
+  cursor: pointer;
   max-width: 300px;
   display: flex;
   align-items: center;

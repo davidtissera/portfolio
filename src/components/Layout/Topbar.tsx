@@ -4,7 +4,7 @@ import { routes, IRoute } from '@/router/routes'
 import { useMobile } from '@/hooks/useMobile';
 import { HamburgerMenuIcon } from '@/components/HamburgerMenuIcon';
 import './css/Topbar.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastOptions } from 'react-toastify';
 import { TOAST_OPTIONS } from '@/common/global';
 
@@ -67,11 +67,20 @@ interface ITopbarDesktop {
 }
 
 function TopbarDesktop(props: ITopbarDesktop) {
-  const { t } = useTranslation()
   const { onChangeLanguage, countryFlag } = props
+  const { t } = useTranslation()
+  const navigate = useNavigate()
+
+  const handleClickName = () => {
+    navigate('/about')
+  }
+
   return (
     <header className="topbar-desktop">
-      <div className="topbar-column-one">
+      <div
+        className="topbar-column-one"
+        onClick={handleClickName}
+      >
         <div className="topbar-circle-initials">D</div>
         <h3 className="topbar-myself-name"><b>David</b> Tissera</h3>
       </div>
